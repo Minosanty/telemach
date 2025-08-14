@@ -1,0 +1,299 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  background: #19162e; /* Fondo neutro oscuro */
+  color: #fff;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  font-size: clamp(1.5em, 3vw, 2.4em);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #2C2451, 2px 2px 0 #fff;
+}
+
+.scoreboard-multitable {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 28px;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 18px 18px 18px;
+}
+
+.scoreboard-section {
+  flex: 1 1 0;
+  min-width: 220px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(44,36,81,0.10);
+  padding: 16px 6px 18px 6px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+}
+
+.scoreboard-section:nth-child(1) {
+  background: #2C2451; /* Morado oscuro */
+}
+.scoreboard-section:nth-child(2) {
+  background: #FF4B69; /* Fucsia */
+}
+.scoreboard-section:nth-child(3) {
+  background: #FFCA2C; /* Amarillo */
+}
+
+.scoreboard-section h2 {
+  color: #fff;
+  font-size: clamp(1.08em, 2vw, 1.32em);
+  font-weight: 800;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+  text-shadow: none;
+}
+.scoreboard-section:nth-child(3) h2 {
+  color: #2C2451; /* Morado para contraste en amarillo */
+}
+
+.scoreboard-container {
+  width: 100%;
+  overflow-x: auto;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.scoreboard {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 18px #19162e;
+  flex: 1 1 auto;
+  border: none;
+}
+
+.scoreboard-section:nth-child(1) .scoreboard {
+  background: #2C2451;
+  color: #fff;
+}
+.scoreboard-section:nth-child(2) .scoreboard {
+  background: #FF4B69;
+  color: #fff;
+}
+.scoreboard-section:nth-child(3) .scoreboard {
+  background: #FFCA2C;
+  color: #2C2451;
+}
+.scoreboard-section:nth-child(3) .scoreboard th,
+.scoreboard-section:nth-child(3) .scoreboard td {
+  color: #2C2451;
+}
+
+
+.scoreboard-section:nth-child(1) .scoreboard thead tr {
+  background: #221d3c;
+  color: #FFCA2C;
+}
+.scoreboard-section:nth-child(2) .scoreboard thead tr {
+  background: #d03c57;
+  color: #fff;
+}
+.scoreboard-section:nth-child(3) .scoreboard thead tr {
+  background: #e6b10d;
+  color: #2C2451;
+}
+
+.scoreboard th, .scoreboard td {
+  padding: clamp(10px, 2vw, 20px) clamp(4px, 1vw, 14px);
+  text-align: center;
+  font-size: clamp(0.9em, 2vw, 1.1em);
+  border-bottom: 2px solid rgba(255,255,255,0.12);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.scoreboard th {
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255,255,255,0.12);
+  background: none;
+}
+
+.scoreboard tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.scoreboard-section:nth-child(1) .scoreboard td:first-child {
+  color: #FFCA2C;
+}
+.scoreboard-section:nth-child(2) .scoreboard td:first-child {
+  color: #fff;
+}
+.scoreboard-section:nth-child(3) .scoreboard td:first-child {
+  color: #2C2451;
+}
+
+/* Lugares (posición) más grandes y vistosos */
+.scoreboard th:first-child,
+.scoreboard td:first-child {
+  font-size: clamp(2em, 5vw, 2.8em);
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  vertical-align: middle;
+}
+
+.scoreboard td.logo-cell img {
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3.5px solid #fff;
+  background: #fff;
+  margin: 0 0 6px 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 1.5px 1.5px 0 #19162e;
+}
+.scoreboard-section:nth-child(3) .scoreboard td.logo-cell img {
+  border: 3.5px solid #2C2451;
+}
+
+.scoreboard td.logo-cell img:hover {
+  border-color: #FF4B69;
+}
+
+.scoreboard td.nombre-cell {
+  font-size: clamp(1.5em, 3vw, 2.8em);
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Puntaje muy grande y con espacio para 3 dígitos */
+.puntos-cell .puntos-input {
+  width: clamp(90px, 11vw, 120px);
+  padding: clamp(12px, 2.8vw, 22px);
+  font-size: clamp(2.3em, 6vw, 3em);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #FFCA2C;
+  border: 2.5px solid #FFCA2C;
+  border-radius: 10px;
+  background: #2C2451;
+  outline: none;
+  box-shadow: 0 2px 8px #FFCA2C33;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.scoreboard-section:nth-child(2) .puntos-cell .puntos-input {
+  color: #fff;
+  border-color: #fff;
+  background: #FF4B69;
+  box-shadow: 0 2px 8px #fff3;
+}
+.scoreboard-section:nth-child(3) .puntos-cell .puntos-input {
+  color: #2C2451;
+  border-color: #2C2451;
+  background: #FFCA2C;
+  box-shadow: 0 2px 8px #2C245133;
+}
+.puntos-cell .puntos-input:focus {
+  border-color: #FF4B69;
+  background: #fff2;
+  box-shadow: 0 2px 16px #FF4B6933;
+}
+
+/* Elimina el apartado de modificar */
+.scoreboard td.modify-cell,
+.scoreboard th.modify-cell {
+  display: none !important;
+}
+
+.row-moved-up {
+  animation: movedUpRow 0.7s;
+  background: #fff2 !important;
+}
+@keyframes movedUpRow {
+  0% { transform: translateY(-24px); }
+  100% { transform: translateY(0); }
+}
+.row-moved-down {
+  animation: movedDownRow 0.7s;
+  background: #FF4B6920 !important;
+}
+@keyframes movedDownRow {
+  0% { transform: translateY(24px); }
+  100% { transform: translateY(0); }
+}
+
+.scoreboard tbody tr {
+  transition: background 0.2s;
+}
+.scoreboard tbody tr:hover {
+  background: #fff3;
+}
+
+@media (max-width: 800px) {
+  .scoreboard td.logo-cell img {
+    width: 64px;
+    height: 64px;
+  }
+  .scoreboard td.nombre-cell {
+    font-size: clamp(1.1em, 4vw, 1.6em);
+  }
+}
+
+@media (max-width: 1080px) {
+  .scoreboard-multitable {
+    flex-direction: column;
+    gap: 0;
+    height: 100%;
+    width: 100vw;
+    padding: 0 5px 5px 5px;
+  }
+  .scoreboard-section {
+    margin-bottom: 0;
+    min-width: 0;
+    height: 33%;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-bottom: 0;
+  }
+}
