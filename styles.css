@@ -1,3 +1,6 @@
+/* ============================
+   CONFIGURACIÓN GENERAL
+   ============================ */
 html, body {
   height: 100%;
   margin: 0;
@@ -28,6 +31,9 @@ main {
   flex-direction: column;
 }
 
+/* ============================
+   TÍTULOS PRINCIPALES
+   ============================ */
 h1 {
   text-align: center;
   margin: 24px 0 12px 0;
@@ -38,6 +44,9 @@ h1 {
   text-shadow: 2px 2px 0 #2C2451, 2px 2px 0 #fff;
 }
 
+/* ============================
+   CONTENEDOR PRINCIPAL
+   ============================ */
 .scoreboard-multitable {
   flex: 1 1 auto;
   display: flex;
@@ -51,6 +60,9 @@ h1 {
   padding: 0 18px 18px 18px;
 }
 
+/* ============================
+   SECCIONES DE TABLAS
+   ============================ */
 .scoreboard-section {
   flex: 1 1 0;
   min-width: 220px;
@@ -66,6 +78,7 @@ h1 {
   border: none;
 }
 
+/* Colores de fondo por sección */
 .scoreboard-section:nth-child(1) {
   background: #2C2451; /* Morado oscuro */
 }
@@ -76,6 +89,9 @@ h1 {
   background: #FFCA2C; /* Amarillo */
 }
 
+/* ============================
+   SUBTÍTULOS DE SECCIÓN
+   ============================ */
 .scoreboard-section h2 {
   color: #fff;
   font-size: clamp(1.08em, 2vw, 1.32em);
@@ -85,9 +101,12 @@ h1 {
   text-shadow: none;
 }
 .scoreboard-section:nth-child(3) h2 {
-  color: #2C2451; /* Morado para contraste en amarillo */
+  color: #2C2451; /* Contraste en amarillo */
 }
 
+/* ============================
+   CONTENEDOR DE TABLA
+   ============================ */
 .scoreboard-container {
   width: 100%;
   overflow-x: auto;
@@ -97,6 +116,9 @@ h1 {
   justify-content: stretch;
 }
 
+/* ============================
+   TABLAS
+   ============================ */
 .scoreboard {
   width: 100%;
   border-collapse: separate;
@@ -108,6 +130,7 @@ h1 {
   border: none;
 }
 
+/* Fondo y texto de las tablas según sección */
 .scoreboard-section:nth-child(1) .scoreboard {
   background: #2C2451;
   color: #fff;
@@ -125,7 +148,7 @@ h1 {
   color: #2C2451;
 }
 
-
+/* Encabezados de tabla */
 .scoreboard-section:nth-child(1) .scoreboard thead tr {
   background: #221d3c;
   color: #FFCA2C;
@@ -158,6 +181,9 @@ h1 {
   border-bottom: none;
 }
 
+/* ============================
+   COLORES DE POSICIONES
+   ============================ */
 .scoreboard-section:nth-child(1) .scoreboard td:first-child {
   color: #FFCA2C;
 }
@@ -168,7 +194,7 @@ h1 {
   color: #2C2451;
 }
 
-/* Lugares (posición) más grandes y vistosos */
+/* Posición (# lugar) muy grande */
 .scoreboard th:first-child,
 .scoreboard td:first-child {
   font-size: clamp(2em, 5vw, 2.8em);
@@ -179,6 +205,9 @@ h1 {
   vertical-align: middle;
 }
 
+/* ============================
+   LOGOS (si se usan)
+   ============================ */
 .scoreboard td.logo-cell img {
   width: 96px;
   height: 96px;
@@ -193,59 +222,67 @@ h1 {
 .scoreboard-section:nth-child(3) .scoreboard td.logo-cell img {
   border: 3.5px solid #2C2451;
 }
-
 .scoreboard td.logo-cell img:hover {
   border-color: #FF4B69;
 }
 
+/* ============================
+   NOMBRES DE EQUIPOS
+   ============================ */
 .scoreboard td.nombre-cell {
-  font-size: clamp(1.5em, 3vw, 2.8em);
+  font-size: clamp(2em, 4vw, 3.6em); /* MÁS GRANDE */
   font-weight: 900;
-  letter-spacing: 1.5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  letter-spacing: 1.8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-transform: uppercase; /* Quita esto si no quieres mayúsculas */
 }
 
-/* Puntaje muy grande y con espacio para 3 dígitos */
+/* ============================
+   PUNTAJES (INPUT)
+   ============================ */
 .puntos-cell .puntos-input {
-  width: clamp(90px, 11vw, 120px);
-  padding: clamp(12px, 2.8vw, 22px);
-  font-size: clamp(2.3em, 6vw, 3em);
+   width: clamp(140px, 14vw, 180px);   /* 👈 Más ancho, entra 0000 */
+  font-size: clamp(2.6em, 6vw, 3.2em); /* 👈 Un poquito más chico para que entren los 4 dígitos cómodos */
+
+  font-size: clamp(3em, 7vw, 4em); /* MÁS GRANDE */
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-align: center;
+
   color: #FFCA2C;
-  border: 2.5px solid #FFCA2C;
-  border-radius: 10px;
+  border: 3px solid #FFCA2C;
+  border-radius: 14px;
   background: #2C2451;
   outline: none;
-  box-shadow: 0 2px 8px #FFCA2C33;
-  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 3px 10px #FFCA2C55;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
 }
+
+/* Variantes por tabla */
 .scoreboard-section:nth-child(2) .puntos-cell .puntos-input {
   color: #fff;
   border-color: #fff;
   background: #FF4B69;
-  box-shadow: 0 2px 8px #fff3;
+  box-shadow: 0 3px 10px #fff5;
 }
 .scoreboard-section:nth-child(3) .puntos-cell .puntos-input {
   color: #2C2451;
   border-color: #2C2451;
   background: #FFCA2C;
-  box-shadow: 0 2px 8px #2C245133;
+  box-shadow: 0 3px 10px #2C245166;
 }
+
+/* Estado activo (focus) */
 .puntos-cell .puntos-input:focus {
   border-color: #FF4B69;
-  background: #fff2;
-  box-shadow: 0 2px 16px #FF4B6933;
+  background: #ffffff22;
+  box-shadow: 0 3px 18px #FF4B6944;
 }
 
-/* Elimina el apartado de modificar */
-.scoreboard td.modify-cell,
-.scoreboard th.modify-cell {
-  display: none !important;
-}
-
+/* ============================
+   FILAS ANIMADAS
+   ============================ */
 .row-moved-up {
   animation: movedUpRow 0.7s;
   background: #fff2 !important;
@@ -263,6 +300,7 @@ h1 {
   100% { transform: translateY(0); }
 }
 
+/* Hover fila */
 .scoreboard tbody tr {
   transition: background 0.2s;
 }
@@ -270,13 +308,16 @@ h1 {
   background: #fff3;
 }
 
+/* ============================
+   RESPONSIVE
+   ============================ */
 @media (max-width: 800px) {
   .scoreboard td.logo-cell img {
     width: 64px;
     height: 64px;
   }
   .scoreboard td.nombre-cell {
-    font-size: clamp(1.1em, 4vw, 1.6em);
+    font-size: clamp(1.4em, 4vw, 1.9em);
   }
 }
 

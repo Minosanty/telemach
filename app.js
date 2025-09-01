@@ -1,46 +1,55 @@
 // 40 equipos con nombre, logo local y puntaje inicial
 const equipos = [
-  { id: 1, nombre: 'EPET 1', logo: 'img/epet1.avif', puntos: 250 },
-  { id: 2, nombre: 'EPET 2', logo: 'img/epet2.avif', puntos: 320 },
-  { id: 3, nombre: 'EPES 10', logo: 'img/epes10.jpg', puntos: 180 },
-  { id: 4, nombre: 'EPES 51', logo: 'img/epes51.jpg', puntos: 207 },
-  { id: 5, nombre: 'EPES 52', logo: 'img/epes52.jpg', puntos: 290 },
-  { id: 6, nombre: 'EPES 54', logo: 'img/epes54.jpg', puntos: 210 },
-  { id: 7, nombre: 'EPES 33', logo: 'img/epes33.jpg', puntos: 230 },
-  { id: 8, nombre: 'EPETP 10', logo: 'img/epetp10.jpeg', puntos: 2200 },
-  { id: 9, nombre: 'Toros', logo: 'img/toros.png', puntos: 24 },
-  { id: 10, nombre: 'Pumas', logo: 'img/pumas.png', puntos: 20 },
-  { id: 11, nombre: 'Rinocerontes', logo: 'img/rinocerontes.png', puntos: 19 },
-  { id: 12, nombre: 'Cóndores', logo: 'img/condores.png', puntos: 15 },
-  { id: 13, nombre: 'Buitres', logo: 'img/buitres.png', puntos: 12 },
-  { id: 14, nombre: 'Zorros', logo: 'img/zorros.png', puntos: 13 },
-  { id: 15, nombre: 'Osos', logo: 'img/osos.png', puntos: 11 },
-  { id: 16, nombre: 'Gacelas', logo: 'img/gacelas.png', puntos: 10 },
-  { id: 17, nombre: 'Venados', logo: 'img/venados.png', puntos: 9 },
-  { id: 18, nombre: 'Ciervos', logo: 'img/ciervos.png', puntos: 8 },
-  { id: 19, nombre: 'Jaguares', logo: 'img/jaguares.png', puntos: 7 },
-  { id: 20, nombre: 'Mapaches', logo: 'img/mapaches.png', puntos: 6 },
-  { id: 21, nombre: 'Linces', logo: 'img/linces.png', puntos: 5 },
-  { id: 22, nombre: 'Cocodrilos', logo: 'img/cocodrilos.png', puntos: 4 },
-  { id: 23, nombre: 'Pájaros', logo: 'img/pajaros.png', puntos: 3 },
-  { id: 24, nombre: 'Elefantes', logo: 'img/elefantes.png', puntos: 2 },
-  { id: 25, nombre: 'Ballenas', logo: 'img/ballenas.png', puntos: 1 },
-  { id: 26, nombre: 'Delfines', logo: 'img/delfines.png', puntos: 0 },
-  { id: 27, nombre: 'Canguros', logo: 'img/canguros.png', puntos: 0 },
-  { id: 28, nombre: 'Suricatas', logo: 'img/suricatas.png', puntos: 0 },
-  { id: 29, nombre: 'Hormigas', logo: 'img/hormigas.png', puntos: 0 },
-  { id: 30, nombre: 'Caracoles', logo: 'img/caracoles.png', puntos: 0 },
-  { id: 31, nombre: 'Perros', logo: 'img/perros.png', puntos: 0 },
-  { id: 32, nombre: 'Gatos', logo: 'img/gatos.png', puntos: 0 },
-  { id: 33, nombre: 'Caballos', logo: 'img/caballos.png', puntos: 0 },
-  { id: 34, nombre: 'Gallos', logo: 'img/gallos.png', puntos: 0 },
-  { id: 35, nombre: 'Monos', logo: 'img/monos.png', puntos: 0 },
-  { id: 36, nombre: 'Patos', logo: 'img/patos.png', puntos: 0 },
-  { id: 37, nombre: 'Gansos', logo: 'img/gansos.png', puntos: 0 },
-  { id: 38, nombre: 'Búhos', logo: 'img/buhos.png', puntos: 0 },
-  { id: 39, nombre: 'Serpientes', logo: 'img/serpientes.png', puntos: 0 },
-  { id: 40, nombre: 'Tiburones', logo: 'img/tiburones.png', puntos: 0 }
-];
+  { id: 1, nombre: 'EPES N° 10 ',  puntos: 0 },
+  { id: 2, nombre: 'EPES Nº 27 ',  puntos: 0 },
+  { id: 3, nombre: 'EPES Nº 30',  puntos: 0 },
+  { id: 4, nombre: 'EPES Nº 31',  puntos: 0 },
+  { id: 5, nombre: 'EPES Nº 33',  puntos: 0 },
+  { id: 6, nombre: 'EPES Nº 35', puntos: 0 },
+  { id: 7, nombre: 'EPES Nº 41 ', puntos: 0 },
+  { id: 8, nombre: 'EPES Nº 42 ',  puntos: 0 },
+  { id: 9, nombre: 'EPES Nº 46 ',  puntos: 0 },
+  { id: 10, nombre: 'EPES Nº 51 ',  puntos: 0 },
+  { id: 11, nombre: 'EPES Nº 52', puntos: 0 },
+  { id: 12, nombre: 'EPES Nº 54', puntos: 0  },
+  { id: 13, nombre: 'EPES Nº 56',  puntos: 0  },
+  { id: 14, nombre: 'EPES Nº 57',  puntos: 0  },
+  { id: 15, nombre: 'EPES Nº 59',puntos: 0  },
+  { id: 16, nombre: 'EPES Nº 60 ',  puntos: 0  },
+  { id: 17, nombre: 'EPES Nº 61 ',  puntos: 0  },
+  { id: 18, nombre: 'EPES Nº 67 ',  puntos: 0  },
+  { id: 19, nombre: 'EPES Nº 68 ',  puntos: 0  },
+  { id: 20, nombre: 'EPES Nº 72 ',  puntos: 0  },
+  { id: 21, nombre: 'EPES Nº 73',  puntos: 0  },
+  { id: 22, nombre: 'EPES Nº 77',  puntos: 0  },
+  { id: 23, nombre: 'EPES Nº 80',  puntos: 0  },
+  { id: 24, nombre: 'EPES Nº 84',  puntos: 0  },
+  { id: 25, nombre: 'EPES Nº 87',  puntos: 0  },
+  { id: 26, nombre: 'EPES Nº 91', puntos: 0 },
+  { id: 27, nombre: 'EPES Nº 93',  puntos: 0 },
+  { id: 28, nombre: 'EPES Nº 95',  puntos: 0 },
+  { id: 29, nombre: 'EPES Nº 96',  puntos: 0 },
+  { id: 30, nombre: 'EPES Nº 99',  puntos: 0 },
+  { id: 31, nombre: 'ISFDCYT',  puntos: 0 },
+  { id: 32, nombre: 'ESCUELA NORMAL ', puntos: 0 },
+  { id: 33, nombre: 'E.P.E.S. Nº 1', puntos: 0 },
+  { id: 34, nombre: 'EPET N°1 ', puntos: 0 },
+  { id: 35, nombre: 'EPET N°2 ',  puntos: 0 },
+  { id: 36, nombre: 'EPET N°5 ',  puntos: 0 },
+  { id: 37, nombre: 'EPET N°7 ',  puntos: 0 },
+  { id: 38, nombre: 'EPETP N°10 ',  puntos: 0 },
+  { id: 39, nombre: 'LA RIBERA',  puntos: 0 },
+  { id: 40, nombre: 'DON BOSCO', puntos: 0 },
+  { id: 41, nombre: 'SANTA ISABEL', puntos: 0 },
+  { id: 42, nombre: 'SAN FRANCISCO DE ASIS', puntos: 0 },
+  { id: 43, nombre: ' DRING', puntos: 0 },  
+  { id: 44, nombre: 'SAN MARTIN', puntos: 0 },
+  { id: 45, nombre: 'SAN JOSE OBRERO', puntos: 0 },
+  { id: 46, nombre: 'ADVENTISTA', puntos: 0 },
+  { id: 47, nombre: ' DOMINGO SAVIO', puntos: 0 },
+  { id: 48, nombre: 'MARADONA', puntos: 0 },
+  { id: 49, nombre: 'ALAS', puntos: 0 }
+]
 
 let equiposActuales = equipos.map(eq => ({ ...eq }));
 
@@ -79,14 +88,6 @@ function renderTablas() {
       nombreTd.textContent = equipo.nombre;
       tr.appendChild(nombreTd);
 
-      // Logo
-      const logoTd = document.createElement('td');
-      logoTd.className = 'logo-cell';
-      const img = document.createElement('img');
-      img.src = equipo.logo;
-      img.alt = equipo.nombre;
-      logoTd.appendChild(img);
-      tr.appendChild(logoTd);
 
       // Puntos (input editable y grande)
       const puntosTd = document.createElement('td');
