@@ -9,8 +9,8 @@ html, body {
 
 body {
   font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  background: #19162e; /* Fondo neutro oscuro */
-  color: #fff;
+  background: #F2F2F2; /* Gris claro */
+  color: #056CF2; /* Azul */
   min-height: 100vh;
   min-width: 100vw;
   height: 100vh;
@@ -39,9 +39,9 @@ h1 {
   margin: 24px 0 12px 0;
   font-size: clamp(1.5em, 3vw, 2.4em);
   font-weight: 900;
-  color: #ffffff;
+  color: #fefefe; /* Rosa */
   letter-spacing: 2px;
-  text-shadow: 2px 2px 0 #2C2451, 2px 2px 0 #fff;
+  
 }
 
 /* ============================
@@ -80,13 +80,13 @@ h1 {
 
 /* Colores de fondo por sección */
 .scoreboard-section:nth-child(1) {
-  background: #2C2451; /* Morado oscuro */
+  background: #056CF2; /* Azul */
 }
 .scoreboard-section:nth-child(2) {
-  background: #FF4B69; /* Fucsia */
+  background: #EE05F2; /* Rosa */
 }
 .scoreboard-section:nth-child(3) {
-  background: #FFCA2C; /* Amarillo */
+  background: #BFF207; /* Verde */
 }
 
 /* ============================
@@ -101,7 +101,7 @@ h1 {
   text-shadow: none;
 }
 .scoreboard-section:nth-child(3) h2 {
-  color: #2C2451; /* Contraste en amarillo */
+  color: #056CF2; /* Contraste en verde */
 }
 
 /* ============================
@@ -125,41 +125,41 @@ h1 {
   border-spacing: 0;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 3px 18px #19162e;
+  box-shadow: 0 3px 18px #056CF2;
   flex: 1 1 auto;
   border: none;
 }
 
 /* Fondo y texto de las tablas según sección */
 .scoreboard-section:nth-child(1) .scoreboard {
-  background: #2C2451;
+  background: #056CF2;
   color: #fff;
 }
 .scoreboard-section:nth-child(2) .scoreboard {
-  background: #FF4B69;
+  background: #EE05F2;
   color: #fff;
 }
 .scoreboard-section:nth-child(3) .scoreboard {
-  background: #FFCA2C;
-  color: #2C2451;
+  background: #BFF207;
+  color: #fff;
 }
 .scoreboard-section:nth-child(3) .scoreboard th,
 .scoreboard-section:nth-child(3) .scoreboard td {
-  color: #2C2451;
+  color: #fff;
 }
 
 /* Encabezados de tabla */
 .scoreboard-section:nth-child(1) .scoreboard thead tr {
-  background: #221d3c;
-  color: #FFCA2C;
+  background: #034BB0;
+  color: #BFF207;
 }
 .scoreboard-section:nth-child(2) .scoreboard thead tr {
-  background: #d03c57;
+  background: #A304B0;
   color: #fff;
 }
 .scoreboard-section:nth-child(3) .scoreboard thead tr {
-  background: #e6b10d;
-  color: #2C2451;
+  background: #AACC06;
+  color: #056CF2;
 }
 
 .scoreboard th, .scoreboard td {
@@ -185,13 +185,13 @@ h1 {
    COLORES DE POSICIONES
    ============================ */
 .scoreboard-section:nth-child(1) .scoreboard td:first-child {
-  color: #FFCA2C;
+  color: #fff;
 }
 .scoreboard-section:nth-child(2) .scoreboard td:first-child {
   color: #fff;
 }
 .scoreboard-section:nth-child(3) .scoreboard td:first-child {
-  color: #2C2451;
+  color: #fff;
 }
 
 /* Posición (# lugar) muy grande */
@@ -205,57 +205,36 @@ h1 {
   vertical-align: middle;
 }
 
-/* ============================
-   LOGOS (si se usan)
-   ============================ */
-.scoreboard td.logo-cell img {
-  width: 96px;
-  height: 96px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 3.5px solid #fff;
-  background: #fff;
-  margin: 0 0 6px 0;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  box-shadow: 1.5px 1.5px 0 #19162e;
-}
-.scoreboard-section:nth-child(3) .scoreboard td.logo-cell img {
-  border: 3.5px solid #2C2451;
-}
-.scoreboard td.logo-cell img:hover {
-  border-color: #FF4B69;
-}
+
 
 /* ============================
    NOMBRES DE EQUIPOS
    ============================ */
 .scoreboard td.nombre-cell {
-  font-size: clamp(2em, 4vw, 3.6em); /* MÁS GRANDE */
+  font-size: clamp(2em, 4vw, 3.6em);
   font-weight: 900;
   letter-spacing: 1.8px;
   padding-top: 12px;
   padding-bottom: 12px;
-  text-transform: uppercase; /* Quita esto si no quieres mayúsculas */
+  text-transform: uppercase;
 }
 
 /* ============================
    PUNTAJES (INPUT)
    ============================ */
 .puntos-cell .puntos-input {
-   width: clamp(140px, 14vw, 180px);   /* 👈 Más ancho, entra 0000 */
-  font-size: clamp(2.6em, 6vw, 3.2em); /* 👈 Un poquito más chico para que entren los 4 dígitos cómodos */
-
-  font-size: clamp(3em, 7vw, 4em); /* MÁS GRANDE */
+   width: clamp(140px, 14vw, 180px);
+  font-size: clamp(3em, 7vw, 4em);
   font-weight: 900;
   letter-spacing: 2.5px;
   text-align: center;
 
-  color: #FFCA2C;
-  border: 3px solid #FFCA2C;
+  color: #fff;
+  border: 3px solid #07f2da;
   border-radius: 14px;
-  background: #2C2451;
+  background: #056CF2;
   outline: none;
-  box-shadow: 0 3px 10px #FFCA2C55;
+  box-shadow: 0 3px 10px #fff;
   transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
 }
 
@@ -263,21 +242,21 @@ h1 {
 .scoreboard-section:nth-child(2) .puntos-cell .puntos-input {
   color: #fff;
   border-color: #fff;
-  background: #FF4B69;
-  box-shadow: 0 3px 10px #fff5;
+  background: #EE05F2;
+  box-shadow: 0 3px 10px rgb(175, 15, 220);
 }
 .scoreboard-section:nth-child(3) .puntos-cell .puntos-input {
-  color: #2C2451;
-  border-color: #2C2451;
-  background: #FFCA2C;
-  box-shadow: 0 3px 10px #2C245166;
+  color: #fff;
+  border-color: #fff;
+  background: #BFF207;
+  box-shadow: 0 3px 10px #00ff1e;
 }
 
 /* Estado activo (focus) */
 .puntos-cell .puntos-input:focus {
-  border-color: #FF4B69;
+  border-color: #EE05F2;
   background: #ffffff22;
-  box-shadow: 0 3px 18px #FF4B6944;
+  box-shadow: 0 3px 18px #EE05F244;
 }
 
 /* ============================
@@ -293,7 +272,7 @@ h1 {
 }
 .row-moved-down {
   animation: movedDownRow 0.7s;
-  background: #FF4B6920 !important;
+  background: #EE05F220 !important;
 }
 @keyframes movedDownRow {
   0% { transform: translateY(24px); }
@@ -338,3 +317,40 @@ h1 {
     padding-bottom: 0;
   }
 }
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(1.2em, 4vw, 1.8em);
+  }
+  .scoreboard th:first-child,
+  .scoreboard td:first-child {
+    font-size: clamp(1.5em, 6vw, 2.2em);
+  }
+  .puntos-cell .puntos-input {
+    width: clamp(100px, 20vw, 140px);
+    font-size: clamp(2em, 10vw, 3em);
+  }/* ============================
+   MARCA DE AGUA GLOBAL
+   ============================ */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 50%;   /* Ajusta el tamaño */
+  height: 50%;
+  
+  background: url("logo.png") no-repeat center center;
+  background-size: contain;
+  opacity: 0.15;   /* Transparencia */
+  
+  z-index: 100;      /* Queda detrás de todo */
+  pointer-events: none; /* No bloquea clicks */
+}
+
+/* Asegura que el contenido de la página quede encima */
+main {
+  position: relative;
+  z-index: 1;
+}}
